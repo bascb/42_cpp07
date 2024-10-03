@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 12:54:44 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/09/29 14:57:28 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/10/02 22:34:11 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,16 @@ void    print_int(int &value)
     std::cout << value << " ";
 }
 
+void    dup_double(double &value)
+{
+    value *= 2;
+}
+
+void    print_double(double &value)
+{
+    std::cout << value << " ";
+}
+
 int	main(int argc, char **argv)
 {
 	std::string test;
@@ -63,6 +73,18 @@ int	main(int argc, char **argv)
             iter(array, 5, int_increment);
             print_comment("After iteration:");
             iter(array, 5, print_int);
+            std::cout << std::endl;
+		}
+		if (test == "duplicate_double" || test == "all" || test == "dup*")
+		{
+            double array[5] = {1.2, 2.5 ,3.8, 4.2, 5.4};
+			print_header("Testing function to iterate and duplicate doubles");
+            print_comment("Before iteration:");
+            iter(array, 5, print_double);
+            std::cout << std::endl;
+            iter(array, 5, dup_double);
+            print_comment("After iteration:");
+            iter(array, 5, print_double);
             std::cout << std::endl;
 		}
 	}
@@ -143,6 +165,7 @@ void	print_help(char *prog_name)
 	std::cout << "Options:" << std::endl;
 	std::cout << std::endl;
 	std::cout << "int_increment - Testing function to iterate and increment ints" << std::endl;
+	std::cout << "duplicate_double - Testing function to iterate and duplicate doubles" << std::endl;
 	std::cout << "all - Run all tests" << std::endl;
 	std::cout << std::endl;
 	std::cout << "Usage example:" << std::endl;
