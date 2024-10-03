@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 12:54:44 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/10/02 22:34:11 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/10/03 20:46:19 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,9 +88,9 @@ int	main(int argc, char **argv)
             std::cout << std::endl;
 		}
 	}
-	if (argc == 1 || test == "all")
+	if (argc == 1)
 	{
-		print_header("Subject example");
+		print_help(argv[0]);
 	}
 	return (0);
 }
