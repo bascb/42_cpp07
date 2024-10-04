@@ -1,5 +1,6 @@
 #include <iostream>
-#include <Array.hpp>
+#include <cstdlib>
+#include "Array.hpp"
 
 #define MAX_VAL 750
 int main(int, char**)
@@ -43,6 +44,16 @@ int main(int, char**)
     {
         std::cerr << e.what() << '\n';
     }
+
+    try
+    {
+        numbers[MAX_VAL - 1] = 0;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+
 
     for (int i = 0; i < MAX_VAL; i++)
     {

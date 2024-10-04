@@ -3,7 +3,7 @@ CXX = c++
 CXXFLAGS = -std=c++98 -Wall -Werror -Wextra -g
 SRC = main.cpp
 OBJ = $(SRC:%.cpp=%.o)
-DEPS = Array.hpp
+DEPS = Array.hpp Array.tpp
 	
 all: $(NAME)
 
