@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/05 09:06:41 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/10/05 13:09:54 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/10/05 13:12:45 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	main(int argc, char **argv)
             std::cout << "numbers size: " << numbers.size() << std::endl;
             print_comment("Assign operator called");
             empty = numbers;
-            print_comment("Set different valus in index 4");
+            print_comment("Set different valus in index 0");
             empty[0] = 24;
             numbers[0] = 42;
             std::cout << "numbers[0] value: " << numbers[0] << " empty[0] value: " << empty[0] << std::endl;
