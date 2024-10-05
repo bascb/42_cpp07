@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/05 09:06:41 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/10/05 12:58:56 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/10/05 13:09:54 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,17 +53,28 @@ int	main(int argc, char **argv)
             Array<int> empty1;
             Array<int> empty2;
             Array<int> empty3;
-            
             Array<int> numbers(MAX_VAL);
-            print_comment("Assign operator caled");
+            
+            print_comment("Check sizes before");
+            std::cout << "empty size: " << empty.size() << std::endl;
+            std::cout << "numbers size: " << numbers.size() << std::endl;
+            print_comment("Assign operator called");
             empty = numbers;
             print_comment("Set different valus in index 4");
             empty[0] = 24;
             numbers[0] = 42;
             std::cout << "numbers[0] value: " << numbers[0] << " empty[0] value: " << empty[0] << std::endl;
+            print_comment("Check sizes after");
+            std::cout << "empty size: " << empty.size() << std::endl;
+            std::cout << "numbers size: " << numbers.size() << std::endl;
             print_comment("Test Construct copy operator and Assign operator with empty arrays");
             empty2 = empty1;
             Array<int> empty4(empty3);
+            print_comment("Get empty arrays size");
+            std::cout << "empty1 size: " << empty1.size() << std::endl;
+            std::cout << "empty2 size: " << empty2.size() << std::endl;
+            std::cout << "empty3 size: " << empty3.size() << std::endl;
+            std::cout << "empty4 size: " << empty4.size() << std::endl;
 		}
 		if (test == "complex_type" || test == "all" || test == "comp*")
 		{
