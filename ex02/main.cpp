@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/05 09:06:41 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/10/05 10:10:29 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/10/05 12:58:56 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,10 @@ int	main(int argc, char **argv)
 		{
 			print_header("Testing empty array creation");
             Array<int> empty;
+            Array<int> empty1;
+            Array<int> empty2;
+            Array<int> empty3;
+            
             Array<int> numbers(MAX_VAL);
             print_comment("Assign operator caled");
             empty = numbers;
@@ -57,6 +61,9 @@ int	main(int argc, char **argv)
             empty[0] = 24;
             numbers[0] = 42;
             std::cout << "numbers[0] value: " << numbers[0] << " empty[0] value: " << empty[0] << std::endl;
+            print_comment("Test Construct copy operator and Assign operator with empty arrays");
+            empty2 = empty1;
+            Array<int> empty4(empty3);
 		}
 		if (test == "complex_type" || test == "all" || test == "comp*")
 		{
